@@ -7,3 +7,9 @@ spring:
       port: 27017
       database: quora_db
       auto-index-creation: true
+  docker:
+    compose:
+      file: ./docker-compose.yml
+      lifecycle-management: start-and-stop
+      stop:
+        command: stop
